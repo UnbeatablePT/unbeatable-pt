@@ -1,0 +1,25 @@
+# Haalt eenmalig de foto's en het logo op van de oude Lovable-site
+# en zet ze in assets/. Starten via: tabblad Actions → "Foto's ophalen" → Run workflow.
+# Doe dit vóórdat het domein naar GitHub Pages wordt omgezet.
+name: Foto's ophalen
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Foto's downloaden
+        run: bash download-fotos.sh
+      - name: Foto's opslaan in de repo
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add assets
+          git diff --cached --quiet || git commit -m "Foto's van de oude site toegevoegd"
+          git push
