@@ -267,13 +267,13 @@ section { position: relative; padding: clamp(80px, 12vw, 150px) 0; }
 .why h2 { position: sticky; top: 120px; }
 .why-list { list-style: none; margin: 0; padding: 0; counter-reset: why; }
 .why-list li {
-  counter-increment: why; display: grid; grid-template-columns: 64px 1fr; gap: 1rem; align-items: baseline;
+  counter-increment: why; display: grid; grid-template-columns: 64px 1fr; gap: .3rem 1rem; align-items: baseline;
   padding: 26px 0; border-bottom: 1px solid var(--line); font-size: 1.2rem; font-weight: 600;
   transition: padding-left .5s var(--ease), color .4s;
 }
 .why-list li::before { content: "0" counter(why); font-family: var(--font-display); font-size: 1.6rem; color: var(--gold); }
 .why-list li:hover { padding-left: 14px; color: #fff; }
-.why-list li small { display: block; font-weight: 400; font-size: .95rem; color: var(--muted); margin-top: .2rem; }
+.why-list li small { grid-column: 2; display: block; font-weight: 400; font-size: .95rem; color: var(--muted); margin-top: .2rem; }
 
 /* ---------- Reviews ---------- */
 .review { overflow: hidden; }
