@@ -26,7 +26,7 @@ De foto's staan nog op de oude site en moeten eenmalig de repo in, vóórdat de 
 - **Foto vervangen:** zet een nieuwe foto in `assets/` met dezelfde bestandsnaam, of pas de `src="assets/..."` aan. Liefst JPG, maximaal ±1600 px breed.
 - **Kleuren:** bovenaan `css/style.css` (`--gold`, `--bg`, enz.).
 - **Review toevoegen:** kopieer een `<figure class="rcard">…</figure>`-blok in de sectie REVIEWS en pas naam en tekst aan. Bezoekers scrollen zelf door de rij (of met de pijltjes).
-- **Aantal reviews / score:** zoek op `41` in `index.html` (staat in de hero, de cijferbalk, de reviewsectie en de SEO-gegevens bovenaan).
+- **Aantal reviews / score:** zoek op `41` in `index.html` (staat in de hero, de reviewsectie en de SEO-gegevens bovenaan).
 
 ## Contact
 
