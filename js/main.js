@@ -81,4 +81,21 @@
   }
 })();
 
+// Reviews: met de pijltjes door de rij scrollen
+document.querySelectorAll(".rslider").forEach(slider => {
+  const track = slider.querySelector(".rslider__track");
+  const [prev, next] = slider.querySelectorAll(".rslider__btn");
+  const step = () => (track.querySelector(".rcard")?.offsetWidth || 300) + 20;
+  const update = () => {
+    prev.disabled = track.scrollLeft <= 4;
+    next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+  };
+  slider.querySelectorAll(".rslider__btn").forEach(b =>
+    b.addEventListener("click", () => track.scrollBy({ left: step() * Number(b.dataset.dir), behavior: "smooth" }))
+  );
+  track.addEventListener("scroll", update, { passive: true });
+  addEventListener("resize", update);
+  update();
+});
+
 document.querySelectorAll("[data-year]").forEach(el => (el.textContent = new Date().getFullYear()));
