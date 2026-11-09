@@ -25,7 +25,7 @@ De foto's staan nog op de oude site en moeten eenmalig de repo in, vóórdat de 
 - **Tekst:** open `index.html` of `over-anke.html` en wijzig de tekst tussen de tags. Elke sectie begint met een duidelijke opmerking, bijvoorbeeld `<!-- ===== AANBOD ===== -->`.
 - **Foto vervangen:** zet een nieuwe foto in `assets/` met dezelfde bestandsnaam, of pas de `src="assets/..."` aan. Liefst JPG, maximaal ±1600 px breed.
 - **Kleuren:** bovenaan `css/style.css` (`--gold`, `--bg`, enz.).
-- **Review toevoegen:** kopieer een `<figure class="rcard">…</figure>`-blok in de sectie REVIEWS en pas naam en tekst aan. Elke rij staat er twee keer in (voor de doorlopende animatie), dus zet een nieuwe review in beide helften van dezelfde rij.
+- **Review toevoegen:** kopieer een `<figure class="rcard">…</figure>`-blok in de sectie REVIEWS en pas naam en tekst aan. Bezoekers scrollen zelf door de rij (of met de pijltjes).
 - **Aantal reviews / score:** zoek op `41` in `index.html` (staat in de hero, de cijferbalk, de reviewsectie en de SEO-gegevens bovenaan).
 
 ## Contact
